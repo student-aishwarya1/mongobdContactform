@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactForm</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <style>
+       /* General body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Form container styles */
+.form-body {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+header {
+            background-color:#d0c8c8;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding-left: 40px;
+        }
+        .btn {
+            background-color:rgb(107, 104, 104);
+            color:white;
+            padding: 10px 40px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+
+
+
+/* Main heading section styles */
+.main-heading {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-heading h1 {
+    text-align: center;
+    font-size: 24px;
+    background-color: #d0c8c8;
+    color:black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.main-heading p {
+    font-size: 16px;
+    color: black;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="phone"] {
+    color: #bdbbbb;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(18, 3, 77);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+button:hover {
+    background-color:rgb(18, 3, 77);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .form-body,
+    .main-heading {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="phone"] {
+        font-size: 14px;
+        padding: 8px;
+        
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+        
+    }
+}
+
+
+    </style> 
+</head>
+<body>
+
+<header>
+    <div class="logo" style="color: black;"> &#64;ishwarya</div>
+    <a href="#" class="btn">Get Started</a>
+</header>
+
+<div class="form-body">
+
+    <form  method="post" accept="/">
+    <label for="">First Name</label>
+    <input type="text" name="fname" placeholder="first name">
+
+    <label for="">Last Name</label>
+    <input type="text" name="lname" placeholder="last name">
+
+    <label for="">Phone no</label>
+    <input type="phone" name="pnumber" placeholder="+91...">
+
+    <label for="">Country</label>
+    <input type="text" name="Cname" placeholder="Country">
+
+    <label for="">What would you like to discuss</label>
+    <input type="text" name="msg" placeholder="type Here...">
+    <button>submit</button>
+
+    </form>
+</div>
+
+<div class="main-heading">
+  <h1> Talk With Our Sales Team</h1><hr>
+  <p>Fill out Your information and an Aishwarya <br> representative will reach out to you .Have a simple Question? <a href="Check out our FAQ">Check out our FAQ</a></p>
+</div>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from actually submitting
+        alert('Data has been submitted.');
+    });
+</script>
+
+</body>
+</html>
